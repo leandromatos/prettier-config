@@ -1,0 +1,18 @@
+{
+  "name": "@leandromatos/prettier-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/leandromatos/prettier-config",
+  "author": "Leandro Matos",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "prettier": ">= 1.18"
+  },
+  "dependencies": {
+    "prettier": "^1.18.2"
+  }
+}
