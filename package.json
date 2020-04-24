@@ -1,6 +1,6 @@
 {
   "name": "@leandromatos/prettier-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "repository": "https://github.com/leandromatos/prettier-config",
   "author": "Leandro Matos",
