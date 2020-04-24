@@ -3,6 +3,6 @@ module.exports = {
   arrowParens: "always",
   singleQuote: true,
   printWidth: 120,
-  htmlWhitespaceSensitivity: "ignore",
-  tabWidth: 2
+  htmlWhitespaceSensitivity: "css",
+  tabWidth: 2,
 };
