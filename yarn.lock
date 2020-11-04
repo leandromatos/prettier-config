@@ -109,10 +109,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@leandromatos/eslint-config@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-0.0.13.tgz#baa5d9efe92450d7ac1e57b8722b3f56f9b93f2b"
-  integrity sha512-rGOSphEKY2+F8w3cSCqiuW2xtihaRTCtCY426tfJYy0+w9ANPUpeE5ZfWN0MDveCeKhq0l2qNoZp+lc2ChZYnQ==
+"@leandromatos/eslint-config@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-0.0.14.tgz#d648b1f3339169b25f6e2924e6d8778926dcaa4d"
+  integrity sha512-RgZ1C/kwtFpxvkJUkM0L/YQCVA1jm4krALg5+NyEISaK9T8In5z+BsSnM8q4XTHbSNZXDf4eXWCtZiBIDHNVkg==
   dependencies:
     babel-eslint "^10.1.0"
     eslint "^7.12.1"
