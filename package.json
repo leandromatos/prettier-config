@@ -7,14 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "lint": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run eslint . --fix"
-  },
   "dependencies": {
-    "prettier": "^2.1.2"
-  },
-  "devDependencies": {
-    "@leandromatos/eslint-config": "^0.0.14",
-    "eslint": "^7.12.1"
+    "prettier": "^2.2.1"
   }
 }
