@@ -1,16 +1,16 @@
 module.exports = {
-  arrowParens: 'avoid',
+  arrowParens: "avoid",
   printWidth: 120,
   semi: false,
   singleQuote: true,
-  trailingComma: 'es5',
-  endOfLine: 'auto',
+  trailingComma: "es5",
+  endOfLine: "auto",
   overrides: [
     {
-      files: ['*.yml', '*.yaml'],
+      files: ["*.yml", "*.yaml"],
       options: {
         singleQuote: false,
       },
     },
   ],
-}
+};
