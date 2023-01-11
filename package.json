@@ -8,6 +8,10 @@
     "index.js"
   ],
   "dependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.8.2"
+  },
+  "devDependencies": {
+    "@leandromatos/eslint-config": "^0.0.22",
+    "eslint": "^8.31.0"
   }
 }

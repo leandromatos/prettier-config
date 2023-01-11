@@ -5,4 +5,12 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'es5',
   endOfLine: 'auto',
+  overrides: [
+    {
+      files: ['*.yml', '*.yaml'],
+      options: {
+        singleQuote: false,
+      },
+    },
+  ],
 }
