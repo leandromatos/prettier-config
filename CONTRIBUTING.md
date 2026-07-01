@@ -13,7 +13,7 @@ yarn install
 `yarn install` sets up [Husky](https://typicode.github.io/husky), which wires two git hooks:
 
 - **`pre-commit`** runs, in order:
-  1. [`lint-staged`](https://github.com/lint-staged/lint-staged) — formats the staged files with Prettier.
+  1. [`lint-staged`](https://github.com/lint-staged/lint-staged) — formats with Prettier and fixes with ESLint on the staged files.
   2. `yarn install --check-files` — fails if the lockfile has drifted from `package.json`.
   3. `yarn test` — the Vitest suite.
 - **`commit-msg`** runs [commitlint](https://commitlint.js.org) on the message.
@@ -24,6 +24,8 @@ Any failure aborts the commit, so nothing lands until all of it passes.
 
 | Script            | Purpose                               |
 | ----------------- | ------------------------------------- |
+| `yarn lint`       | Lint the repository.                  |
+| `yarn lint:fix`   | Lint the repository with `--fix`.     |
 | `yarn test`       | Run the Vitest suite once.            |
 | `yarn test:watch` | Run the suite in watch mode.          |
 | `yarn test:cov`   | Run the suite with a coverage report. |
