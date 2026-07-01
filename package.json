@@ -1,11 +1,23 @@
 {
   "name": "@leandromatos/prettier-config",
   "version": "2.0.0-snapshot.20260701.3",
-  "main": "index.js",
-  "type": "module",
-  "repository": "https://github.com/leandromatos/prettier-config",
-  "author": "Leandro Matos",
+  "description": "Prettier configuration with Tailwind CSS class sorting.",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
   "license": "MIT",
+  "author": "Leandro Matos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandromatos/prettier-config.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
   "publishConfig": {
     "provenance": true,
     "access": "public",
@@ -17,9 +29,6 @@
     "test:cov": "vitest run --coverage",
     "prepare": "husky"
   },
-  "files": [
-    "index.js"
-  ],
   "dependencies": {
     "prettier-plugin-tailwindcss": "^0.8.0"
   },
