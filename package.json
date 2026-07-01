@@ -2,13 +2,32 @@
   "name": "@leandromatos/prettier-config",
   "version": "1.1.2",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/leandromatos/prettier-config",
   "author": "Leandro Matos",
+  "license": "MIT",
+  "publishConfig": {
+    "provenance": true,
+    "access": "public",
+    "tag": "latest"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "prettier": "^2.8.7"
+    "prettier-plugin-tailwindcss": "^0.8.0"
   },
-  "devDependencies": {}
+  "peerDependencies": {
+    "prettier": ">=3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@leandromatos/commitlint-config": "^0.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.4"
+  }
 }

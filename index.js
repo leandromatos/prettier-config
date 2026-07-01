@@ -1,16 +1,19 @@
-module.exports = {
-  arrowParens: "avoid",
+/** @type {import('prettier').Config} */
+const config = {
+  arrowParens: 'avoid',
   printWidth: 120,
   semi: false,
   singleQuote: true,
-  trailingComma: "es5",
-  endOfLine: "auto",
+  plugins: ['prettier-plugin-tailwindcss'],
+  tailwindFunctions: ['tv', 'clsx', 'cva', 'tw'],
   overrides: [
     {
-      files: ["*.yml", "*.yaml"],
+      files: ['*.yml', '*.yaml'],
       options: {
         singleQuote: false,
       },
     },
   ],
-};
+}
+
+export default config
