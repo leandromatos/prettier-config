@@ -1,6 +1,6 @@
 # Prettier Config
 
-Personal [Prettier](https://prettier.io) configuration: no semicolons, single quotes, 120-column line width, and Tailwind CSS class sorting, in a single package.
+Personal [Prettier](https://prettier.io) configuration: no semicolons, single quotes, 120-column line width, and Tailwind CSS class sorting.
 
 ## ✨ Features
 
@@ -30,15 +30,7 @@ Prettier `>= 3` is a peer dependency, so you bring your own. `prettier-plugin-ta
 
 ## 🚀 Quick Start
 
-Point the `prettier` field of your `package.json` at the package name:
-
-```json
-{
-  "prettier": "@leandromatos/prettier-config"
-}
-```
-
-Or put the same string in a dedicated `.prettierrc.json`:
+Reference the config by name from a `.prettierrc` file at your project root:
 
 ```json
 "@leandromatos/prettier-config"
@@ -48,6 +40,25 @@ That is the whole setup. Run Prettier as usual:
 
 ```bash
 yarn prettier --write .
+```
+
+### Editor and lint-staged setup
+
+Format on save with Prettier as the default formatter (VSCode, with the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), `.vscode/settings.json`):
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+```
+
+[lint-staged](https://github.com/lint-staged/lint-staged) (`lint-staged.config.mjs`) — format staged files on commit:
+
+```js
+export default {
+  '*': 'prettier --write --ignore-unknown',
+}
 ```
 
 ## 🧩 What's Included
@@ -84,11 +95,11 @@ export default {
 
 ## 🏷️ Versioning
 
-Semver, published to npm. The peer range is Prettier `>= 3`; a Prettier major that changes formatting defaults ships as a major here too. Snapshots publish as `X.Y.Z-snapshot.YYYYMMDD.N` to test a change before a stable release.
+Semver, published to npm. The peer range is Prettier `>= 3`; a Prettier major that changes formatting defaults ships as a major here too. Snapshots publish to the `snapshot` dist-tag as `X.Y.Z-snapshot.YYYYMMDD.N`; stable releases go to `latest`.
 
 ## 🤝 Contributing
 
-Commits follow Conventional Commits, validated by [@leandromatos/commitlint-config](https://github.com/leandromatos/commitlint-config). Work on a `release/vMAJOR` branch and open a pull request. A release is a separate, explicit step: bump the version (the `snapshot-version-bump.sh` script for pre-releases), then push a `v*` tag, which the publish workflow picks up.
+This repository follows [Conventional Commits](https://www.conventionalcommits.org). See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow, releases, and local setup.
 
 ## 📄 License
 
