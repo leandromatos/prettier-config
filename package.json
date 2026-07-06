@@ -43,8 +43,8 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.0",
-    "@leandromatos/commitlint-config": "^0.6.0-snapshot.20260701.7",
-    "@leandromatos/eslint-config": "^3.0.0-snapshot.20260701.7",
+    "@leandromatos/commitlint-config": "^1.0.0",
+    "@leandromatos/eslint-config": "^3.0.0",
     "@vitest/coverage-v8": "^4.1.9",
     "@vitest/ui": "^4.1.9",
     "eslint": "^10.6.0",

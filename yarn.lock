@@ -488,18 +488,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@leandromatos/commitlint-config@^0.6.0-snapshot.20260701.7":
-  version "0.6.0-snapshot.20260701.7"
-  resolved "https://registry.yarnpkg.com/@leandromatos/commitlint-config/-/commitlint-config-0.6.0-snapshot.20260701.7.tgz#9abc8ffe37b383697b0e92c72ee759addecffd8e"
-  integrity sha512-oeTsBJ3bT5u9zOcsxUfQDy3pGZh34RaslB0+qVW9wtpkaxwTQjwpo1cqKTkcmIWGLVuiVLC9gizr02Kc/WmUxQ==
+"@leandromatos/commitlint-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@leandromatos/commitlint-config/-/commitlint-config-1.0.0.tgz#6916f9b0306e57a1a0a375388bc55f238d668685"
+  integrity sha512-Ymd/3+Jf/o69WniyjeZhYemLQ50q97wcn4E+LCwwcvPWbIj2hQCxssTmW9/ZZtiWonelI9/Uqt1BHXqX+JW4LQ==
   dependencies:
     "@commitlint/cli" "^21.2.0"
     "@commitlint/config-conventional" "^21.2.0"
 
-"@leandromatos/eslint-config@^3.0.0-snapshot.20260701.7":
-  version "3.0.0-snapshot.20260701.7"
-  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-3.0.0-snapshot.20260701.7.tgz#628bb0222441e75f1c0c9566eb2f33001e57fbf8"
-  integrity sha512-NhykxpZRbfytJ6P/x6NSLgZYBAuv+7PZJQYoIUto1qjeCpWYxki1HG/x+oC4YdXv0IUARBrTAEgoKSOICsIIqA==
+"@leandromatos/eslint-config@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-3.0.0.tgz#5bf4bcfadf98809edec415e41e6e8e66250cf156"
+  integrity sha512-UucoeDLS7R4ybakMeMRnNvlFl4CCGzqpH3vSpu6JFCH1MbX6snx7G09DLx+a+ggmihV57McTBy9TOOPQl36anw==
   dependencies:
     "@eslint/js" "^10.0.1"
     "@eslint/markdown" "^8.0.3"
