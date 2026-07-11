@@ -1,6 +1,6 @@
 {
   "name": "@leandromatos/prettier-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Prettier configuration with Tailwind CSS class sorting.",
   "keywords": [
     "prettier",
@@ -42,16 +42,16 @@
     "prettier": ">=3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.0",
+    "@commitlint/cli": "^21.2.1",
     "@leandromatos/commitlint-config": "^1.0.0",
     "@leandromatos/eslint-config": "^3.0.0",
-    "@vitest/coverage-v8": "^4.1.9",
-    "@vitest/ui": "^4.1.9",
-    "eslint": "^10.6.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/ui": "^4.1.10",
+    "eslint": "^10.7.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.5",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.10"
   }
 }
