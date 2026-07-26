@@ -13,7 +13,7 @@ Personal [Prettier](https://prettier.io) configuration: no semicolons, single qu
 
 ## 🧭 How It Works
 
-Prettier reads a shared config by resolving a package name to the object it exports, the same way it resolves a local `.prettierrc`. You reference `@leandromatos/prettier-config` as a string; Prettier loads this package's `index.js`, which exports the options object, and formats as if those options were written in your own config.
+Prettier reads a shared config by resolving a package name to the object it exports, the same way it resolves a local `.prettierrc`. You reference `@leandromatos/prettier-config` as a string; Prettier loads this package's `src/index.js`, which exports the options object, and formats as if those options were written in your own config.
 
 The Tailwind plugin travels with the config as a dependency, so class sorting works on install with nothing else to wire. It only rewrites where Tailwind classes live — `className` attributes and the configured `tailwindFunctions` — and leaves every other string untouched.
 
