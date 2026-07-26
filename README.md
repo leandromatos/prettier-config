@@ -7,6 +7,7 @@ Personal [Prettier](https://prettier.io) configuration: no semicolons, single qu
 - **One formatter, every project** — a single source of truth for Prettier options, so formatting never drifts between repositories.
 - **Tailwind class sorting built in** — bundles `prettier-plugin-tailwindcss` and sorts `className` and the `tv`, `clsx`, `cva`, and `tw` calls with no extra setup.
 - **ESM, Prettier 3** — ships as an ES module against the current Prettier major.
+- **Typed** — publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
 - **Reference by string** — no config body to copy; point Prettier at the package name and you are done.
 - **Override-friendly** — spread it in a flat config file and change any option locally.
 
@@ -27,6 +28,8 @@ yarn add --dev prettier @leandromatos/prettier-config
 ```
 
 Prettier `>= 3` is a peer dependency, so you bring your own. `prettier-plugin-tailwindcss` ships with the config; you do not install it separately.
+
+Node `>= 22.12.0` is required.
 
 ## 🚀 Quick Start
 
@@ -95,7 +98,7 @@ export default {
 
 ## 🏷️ Versioning
 
-Semver, published to npm. The peer range is Prettier `>= 3`; a Prettier major that changes formatting defaults ships as a major here too. Snapshots publish to the `snapshot` dist-tag as `X.Y.Z-snapshot.YYYYMMDD.N`; stable releases go to `latest`.
+Semver, published to npm. The peer range is Prettier `>= 3` on Node `>= 22.12.0`; a Prettier major that changes formatting defaults ships as a major here too. Snapshots publish to the `snapshot` dist-tag as `X.Y.Z-snapshot.YYYYMMDD.N`; stable releases go to `latest`.
 
 ## 🤝 Contributing
 
