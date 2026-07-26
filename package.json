@@ -36,7 +36,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "prettier-plugin-tailwindcss": "^0.8.0"
+    "prettier-plugin-tailwindcss": "^0.8.1"
   },
   "peerDependencies": {
     "prettier": ">=3"
@@ -47,10 +47,10 @@
     "@leandromatos/eslint-config": "^3.0.0",
     "@vitest/coverage-v8": "^4.1.10",
     "@vitest/ui": "^4.1.10",
-    "eslint": "^10.7.0",
+    "eslint": "^10.8.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.9.5",
+    "lint-staged": "^17.2.0",
+    "prettier": "^3.9.6",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10"
   }
