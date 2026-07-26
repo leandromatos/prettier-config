@@ -6,7 +6,7 @@ import config from '@leandromatos/eslint-config'
 export default [
   ...config,
   {
-    ignores: ['coverage', 'CHANGELOG.md'],
+    ignores: ['coverage', 'CHANGELOG.md', 'index.d.ts'],
   },
   {
     files: ['.prettierrc.mjs', 'test/**/*.js'],

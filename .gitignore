@@ -88,3 +88,6 @@ sw.*
 
 # npm config
 .npmrc
+
+# Generated type declarations
+index.d.ts
