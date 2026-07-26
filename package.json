@@ -41,6 +41,9 @@
   "peerDependencies": {
     "prettier": ">=3"
   },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
     "@leandromatos/commitlint-config": "^1.0.0",
