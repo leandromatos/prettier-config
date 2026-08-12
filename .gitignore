@@ -91,3 +91,8 @@ sw.*
 
 # Generated type declarations
 src/index.d.ts
+
+# Lockfiles from another package manager. This repository resolves with pnpm, and a
+# second lockfile silently resolves the same ranges to different versions.
+yarn.lock
+package-lock.json
