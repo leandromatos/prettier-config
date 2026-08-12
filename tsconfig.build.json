@@ -1,0 +1,17 @@
+{
+  // Emits `src/index.d.ts` from the JSDoc, and nothing else. Kept apart from
+  // `tsconfig.json` because that one also covers `eslint.config.mts`, and a tooling
+  // config file has no business producing a declaration that ships in the package.
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "esnext",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/index.js"]
+}

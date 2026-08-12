@@ -1,14 +1,16 @@
 {
+  // Type-checks everything the repository owns, including `eslint.config.mts`. ESLint's
+  // type-aware layer resolves a file through the nearest project, so a config file that
+  // no project covers fails to parse rather than being linted.
   "compilerOptions": {
     "allowJs": true,
     "checkJs": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "noEmit": true,
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "esnext",
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src/index.js"]
+  "include": ["eslint.config.mts", "src/index.js"]
 }
