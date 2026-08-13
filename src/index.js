@@ -24,6 +24,22 @@ const config = {
         singleQuote: false,
       },
     },
+    {
+      // Prettier formats code embedded in another language, so a fenced block in a document is
+      // reformatted with the same rules as source — and at a print width of 120, any example that
+      // fits on one line is joined into one, however it was written.
+      //
+      // That is right for source files and wrong for prose: in an example the line breaks are the
+      // explanation. A type written across four lines to show what the alternatives are, or a JSON
+      // payload with one field per line, both collapse into a line nobody can read, and the point
+      // they were making disappears with the breaks.
+      //
+      // Scoped to Markdown, so a template literal in TypeScript is still formatted as before.
+      files: ['*.md', '*.mdx'],
+      options: {
+        embeddedLanguageFormatting: 'off',
+      },
+    },
   ],
 }
 

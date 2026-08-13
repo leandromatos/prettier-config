@@ -77,11 +77,16 @@ The base options, applied to every file:
 | `plugins`           | `prettier-plugin-tailwindcss` | Sort Tailwind CSS classes.                                 |
 | `tailwindFunctions` | `tv`, `clsx`, `cva`, `tw`     | Calls whose string arguments get class sorting.            |
 
-One override, for YAML, where double quotes read more naturally:
+Two overrides:
 
-| Files             | Option        | Value   |
-| ----------------- | ------------- | ------- |
-| `*.yml`, `*.yaml` | `singleQuote` | `false` |
+| Files             | Option                       | Value   | Why                                                 |
+| ----------------- | ---------------------------- | ------- | --------------------------------------------------- |
+| `*.yml`, `*.yaml` | `singleQuote`                | `false` | Double quotes read more naturally in YAML.          |
+| `*.md`, `*.mdx`   | `embeddedLanguageFormatting` | `off`   | A fenced example keeps the shape it was written in. |
+
+The Markdown one is worth spelling out. Prettier formats code embedded in another language, so a fenced block in a document gets the same rules as source — and at a print width of 120, an example that fits on one line is joined into one, however it was written. That is right for source files and wrong for prose: in an example the line breaks are the explanation. A type written across four lines to show what the alternatives are collapses into a line nobody can read, and the point it was making disappears with the breaks.
+
+The override is scoped to documents, so a template literal in TypeScript is still formatted as before.
 
 `plugins` holds a resolved absolute URL rather than the plugin's name, and that is deliberate. Prettier resolves a plugin name from the formatted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the plugin there — pnpm does not. Resolving it here means the dependency this package declares is the one that loads, whatever the consumer installs with.
 

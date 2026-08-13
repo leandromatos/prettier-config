@@ -61,4 +61,19 @@ describe('prettier-config', () => {
     // so the assertion above would still pass with the override removed.
     expect(await fmtResolved('const value = "a"\n', 'sample.js')).toContain("'a'")
   })
+
+  it('leaves a fenced code block in Markdown exactly as written', async () => {
+    // The line breaks in an example are the explanation, and this one fits well
+    // inside the print width — so with embedded formatting on, Prettier joins it
+    // into one line and the point the example was making disappears with them.
+    const fence = "```ts\ntype Locale =\n  | 'pt-BR'\n  | 'en-US'\n```\n"
+
+    expect(await fmtResolved(fence, 'sample.md')).toBe(fence)
+  })
+
+  it('still formats code embedded outside Markdown', async () => {
+    // The pair is the point again: the override is scoped to documents, so a
+    // tagged template in TypeScript keeps being formatted as it always was.
+    expect(await fmtResolved('const styles = css`color:red;`\n', 'sample.ts')).toContain('color: red;')
+  })
 })
