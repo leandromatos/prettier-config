@@ -83,6 +83,8 @@ One override, for YAML, where double quotes read more naturally:
 | ----------------- | ------------- | ------- |
 | `*.yml`, `*.yaml` | `singleQuote` | `false` |
 
+`plugins` holds a resolved absolute URL rather than the plugin's name, and that is deliberate. Prettier resolves a plugin name from the formatted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the plugin there — pnpm does not. Resolving it here means the dependency this package declares is the one that loads, whatever the consumer installs with.
+
 ## ⚙️ Configuration
 
 Prettier has no `extends`, so you override by spreading the config. Import it in a `prettier.config.mjs` and change any option:
