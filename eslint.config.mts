@@ -1,10 +1,8 @@
-import config from '@leandromatos/eslint-config'
+import type { Config } from '@leandromatos/eslint-config'
+import { configs } from '@leandromatos/eslint-config'
 
-export default [
-  ...config,
-  {
-    ignores: ['coverage', 'src/index.d.ts'],
-  },
+const eslintConfig: Config[] = [
+  ...configs.recommended({ ignores: ['src/index.d.ts'] }),
   {
     files: ['.prettierrc.mjs', 'src/__tests__/**/*.js'],
     rules: {
@@ -13,3 +11,5 @@ export default [
     },
   },
 ]
+
+export default eslintConfig
