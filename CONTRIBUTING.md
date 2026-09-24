@@ -15,9 +15,9 @@ The repository resolves with pnpm, pinned by `packageManager` in `package.json`.
 `pnpm install` sets up [Husky](https://typicode.github.io/husky), which wires two git hooks:
 
 - **`pre-commit`** runs, in order:
-  1. [`lint-staged`](https://github.com/lint-staged/lint-staged) — formats with Prettier and fixes with ESLint on the staged files.
-  2. `pnpm install --frozen-lockfile` — fails if the lockfile has drifted from `package.json`.
-  3. `pnpm run test` — the Vitest suite.
+  1. [`lint-staged`](https://github.com/lint-staged/lint-staged), which formats with Prettier and fixes with ESLint on the staged files.
+  2. `pnpm install --frozen-lockfile`, which fails if the lockfile has drifted from `package.json`.
+  3. `pnpm run test`, the Vitest suite.
 - **`commit-msg`** runs [commitlint](https://commitlint.js.org) on the message.
 
 Any failure aborts the commit, so nothing lands until all of it passes.
@@ -65,7 +65,7 @@ The bump is applied to the real published state, never to `.version`:
 base = max(highest production tag, highest version published to npm)
 ```
 
-The distinction is not cosmetic. Between releases `.version` holds the _last published_ version, so bumping from it produces `X.Y.Z-snapshot.N` against an already-published `X.Y.Z` — and a prerelease sorts _below_ its own release, which lands the `snapshot` dist-tag behind `latest`.
+The distinction is not cosmetic. Between releases `.version` holds the _last published_ version, so bumping from it produces `X.Y.Z-snapshot.N` against an already-published `X.Y.Z`. A prerelease sorts _below_ its own release, which lands the `snapshot` dist-tag behind `latest`.
 
 ### What each path leaves behind
 
@@ -84,4 +84,4 @@ Preview the notes for any ref without creating anything:
 
 ### First-time setup
 
-Publishing runs over OIDC (trusted publishing), with no npm token. It needs a trusted publisher registered once on npm — package settings → Trusted Publisher → GitHub Actions, pointing at `leandromatos` / `prettier-config` / `deploy.yaml`. Without it the publish fails with a 404.
+Publishing runs over OIDC (trusted publishing), with no npm token. It needs a trusted publisher registered once on npm, under package settings → Trusted Publisher → GitHub Actions, pointing at `leandromatos` / `prettier-config` / `deploy.yaml`. Without it the publish fails with a 404.

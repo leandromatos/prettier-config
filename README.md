@@ -4,18 +4,18 @@ Personal [Prettier](https://prettier.io) configuration: no semicolons, single qu
 
 ## ✨ Features
 
-- **One formatter, every project** — a single source of truth for Prettier options, so formatting never drifts between repositories.
-- **Tailwind class sorting built in** — bundles `prettier-plugin-tailwindcss` and sorts `className` and the `tv`, `clsx`, `cva`, and `tw` calls with no extra setup.
-- **ESM, Prettier 3** — ships as an ES module against the current Prettier major.
-- **Typed** — publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
-- **Reference by string** — no config body to copy; point Prettier at the package name and you are done.
-- **Override-friendly** — spread it in a flat config file and change any option locally.
+- **One formatter, every project.** A single source of truth for Prettier options, so formatting never drifts between repositories.
+- **Tailwind class sorting built in.** Bundles `prettier-plugin-tailwindcss` and sorts `className` and the `tv`, `clsx`, `cva`, and `tw` calls with no extra setup.
+- **ESM, Prettier 3.** Ships as an ES module against the current Prettier major.
+- **Typed.** Publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
+- **Reference by string.** No config body to copy; point Prettier at the package name and you are done.
+- **Override-friendly.** Spread it in a flat config file and change any option locally.
 
 ## 🧭 How It Works
 
 Prettier reads a shared config by resolving a package name to the object it exports, the same way it resolves a local `.prettierrc`. You reference `@leandromatos/prettier-config` as a string; Prettier loads this package's `src/index.js`, which exports the options object, and formats as if those options were written in your own config.
 
-The Tailwind plugin travels with the config as a dependency, so class sorting works on install with nothing else to wire. It only rewrites where Tailwind classes live — `className` attributes and the configured `tailwindFunctions` — and leaves every other string untouched.
+The Tailwind plugin travels with the config as a dependency, so class sorting works on install with nothing else to wire. It only rewrites where Tailwind classes live, in `className` attributes and the configured `tailwindFunctions`, and leaves every other string untouched.
 
 There is no merge step. Prettier applies exactly what the package exports; to change anything, you spread the object and override, shown under Configuration below.
 
@@ -56,7 +56,7 @@ Format on save with Prettier as the default formatter (VSCode, with the [Prettie
 }
 ```
 
-[lint-staged](https://github.com/lint-staged/lint-staged) (`lint-staged.config.mjs`) — format staged files on commit:
+[lint-staged](https://github.com/lint-staged/lint-staged) (`lint-staged.config.mjs`), to format staged files on commit:
 
 ```js
 export default {
@@ -84,11 +84,11 @@ Two overrides:
 | `*.yml`, `*.yaml` | `singleQuote`                | `false` | Double quotes read more naturally in YAML.          |
 | `*.md`, `*.mdx`   | `embeddedLanguageFormatting` | `off`   | A fenced example keeps the shape it was written in. |
 
-The Markdown one is worth spelling out. Prettier formats code embedded in another language, so a fenced block in a document gets the same rules as source — and at a print width of 120, an example that fits on one line is joined into one, however it was written. That is right for source files and wrong for prose: in an example the line breaks are the explanation. A type written across four lines to show what the alternatives are collapses into a line nobody can read, and the point it was making disappears with the breaks.
+The Markdown one is worth spelling out. Prettier formats code embedded in another language, so a fenced block in a document gets the same rules as source. At a print width of 120, an example that fits on one line is joined into one, however it was written. That is right for source files and wrong for prose: in an example the line breaks are the explanation. A type written across four lines to show what the alternatives are collapses into a line nobody can read, and the point it was making disappears with the breaks.
 
 The override is scoped to documents, so a template literal in TypeScript is still formatted as before.
 
-`plugins` holds a resolved absolute URL rather than the plugin's name, and that is deliberate. Prettier resolves a plugin name from the formatted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the plugin there — pnpm does not. Resolving it here means the dependency this package declares is the one that loads, whatever the consumer installs with.
+`plugins` holds a resolved absolute URL rather than the plugin's name, and that is deliberate. Prettier resolves a plugin name from the formatted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the plugin there, and pnpm does not. Resolving it here means the dependency this package declares is the one that loads, whatever the consumer installs with.
 
 ## ⚙️ Configuration
 
